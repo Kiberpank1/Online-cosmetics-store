@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import logoSvg from "../assets/img/logo.svg";
 
@@ -14,6 +15,7 @@ function Header() {
           <p>С любовью к вашей коже</p>
         </div>
       </div>
+      
       
       <div className="header__cart" >
 
