@@ -2,8 +2,6 @@ import React from 'react'
 
 
 
-
-
 export default 
 
 
@@ -33,42 +31,3 @@ function Categories({items, onClickItem }) {
         </div>
     )
 }
-// class Categories extends React.Component { 
-//     state = {
-//         activeItem: 1,
-//         test: 123,
-//     };
-    
-//     onSelectItem = (index, name) => {
-//         this.setState({
-//             activeItem: index,
-            
-
-//         });
-
-//     };
-
-//     render () {
-//         const {items, onClick} = this.props;
-//         console.log (this.state)
-//         return (
-//                     <div>
-//                           <div className="categories">
-//                         <ul>            
-//                           <li>Все</li>
-//                           {items.map((name, index) => (
-//                               <li 
-//                               className={this.state.activeItem === index ? 'active' : '' } 
-//                               onClick={() => this.onSelectItem(index)} 
-//                               key={`${name}_${index}`}> {name}
-//                               </li>)// Более уникальное значение <li>
-//                            ) }
-                         
-//                         </ul>
-//                       </div>
-//                     </div>
-//                 )
-//             }
-//         }
-
-// export default Categories;
