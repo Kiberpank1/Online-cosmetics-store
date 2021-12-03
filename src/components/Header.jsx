@@ -8,17 +8,19 @@ import Button from "./Button";
 function Header() {
     return (
     <div className="header">
-          <div className="header__logo">
+      <div className="container">
+      <Link to="/"><div className="header__logo">
         <img width="50" src={logoSvg} alt="Pizza logo" />
         <div>
           <h1>NA||BI</h1>
           <p>С любовью к вашей коже</p>
         </div>
       </div>
-      
+      </Link>
       
       <div className="header__cart" >
 
+      <Link to="/cart">
       <Button className="button--cart">
       <span>520 ₽</span>
           <div className="button__delimiter"></div>
@@ -53,11 +55,11 @@ function Header() {
           </svg>
           <span>3</span>
        
-          </Button>
+          </Button></Link>
 
       
 
-       
+          </div>
           
       </div>
     </div>

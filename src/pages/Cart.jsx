@@ -1,9 +1,12 @@
 import React from 'react'
-
+import { Header } from '../components'
+import{Routes, Route} from 'react-router-dom'
 function Cart() {
     return (
         <div>
-            <h1>Корзина</h1>
+            <Routes>
+    <Route path ="/" element={ <Header/>}/>
+    </Routes>   
         </div>
     )
 }
