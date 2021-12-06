@@ -14,7 +14,7 @@ ReactDOM.render(
 
       <Routes>
 
-      <Route path="/cart" element={<Cart/>} />
+      <Route path="/cart/*" element={<Cart/>} />
       <Route path="/head" element={<Header/>} />
       <Route path="//*" element={<App/>} />    
       <Route path="*" element={<Warning404/>} />           
