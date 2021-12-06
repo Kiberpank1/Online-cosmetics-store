@@ -1,7 +1,7 @@
 import React from "react";
-import {Home, Cart} from './pages'
+import {Home,} from './pages'
 import {Header} from './components';
-import {BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes,  } from "react-router-dom";
 
  
 
@@ -15,7 +15,7 @@ function App() {
      
     <Routes>
     <Route path ="/" element={ <Home/>}/>
-    <Route path ="/cart" element={ <Cart/>}/>
+    
     </Routes>
 
 

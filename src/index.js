@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
 import Warning404 from './pages/Warning404'
 import Header from './components/Header'
-import { Cart, Home } from './pages';
+import { Cart, } from './pages';
 
 
 ReactDOM.render(
@@ -16,7 +16,7 @@ ReactDOM.render(
 
       <Route path="/cart" element={<Cart/>} />
       <Route path="/head" element={<Header/>} />
-      <Route path="/" element={<App/>} />    
+      <Route path="//*" element={<App/>} />    
       <Route path="*" element={<Warning404/>} />           
       
       </Routes> 

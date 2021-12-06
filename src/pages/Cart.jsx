@@ -3,9 +3,11 @@ import { Header } from '../components'
 import{Routes, Route} from 'react-router-dom'
 function Cart() {
     return (
-        <div>
+        <div className="wrapper">
             <Routes>
+            
     <Route path ="/" element={ <Header/>}/>
+
     </Routes>   
         </div>
     )
