@@ -27,7 +27,7 @@ function Home({items}) {
           {
             items.map((obj) => 
               (
-            <PizzaBlock key={obj.id} {...obj} />  )
+            <PizzaBlock key={obj.id} {...obj}  />  )
             )
           }
 
