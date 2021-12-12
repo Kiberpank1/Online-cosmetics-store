@@ -6,7 +6,7 @@ export default function SortPopup( {items}) {
     const [visiblePopup, setVisiblePopup] = React.useState(false) // Первый рендер ДОМ элементов !
     const [activeItem, setActiveItem] = React.useState(0)
     const sortRef = React.useRef(); // useRef позволяет хранить ссылки в Реакте на ДОМ элементы  !!! рядом path - путь 
-    const activeLabel = items[activeItem];
+    const activeLabel = items[activeItem].name;
     
 
         const toggleVisiblePopup = () => {
@@ -52,8 +52,10 @@ export default function SortPopup( {items}) {
             </div>
            {visiblePopup && <div className="sort__popup">
               <ul>
-                {items && items.map((name, index) => (  // Итерация по массиву с категориями 
-                  <li onClick={() => onSelectItem(index)} className={activeItem === index ? 'active' : '' } key={`${name}_${index}`}> {name}</li>// Более уникальное значение <li> key={`${name}_${index}`}>
+                {items && items.map((obj, index) => (  // Итерация по массиву с категориями 
+                  <li onClick={() => onSelectItem(index)} className={activeItem === index ? 'active' : '' } 
+                  key={`${obj.type}_${index}`}> 
+                  {obj.name}</li>// Более уникальное значение <li> key={`${name}_${index}`}>
                )) }
               </ul>
             </div>}

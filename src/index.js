@@ -7,26 +7,22 @@ import Warning404 from './pages/Warning404'
 import Header from './components/Header'
 import { Cart, } from './pages';
 import store from './redux/store'
+import { Provider } from 'react-redux';
 
 
-const inc = () => {
-  store.dispatch({
-    type: 'counter/incremented',
-  });
-};
 
 
-store.subscribe(()=> console.log ('Измененине произошло', store.getState()));
+
 
 
 ReactDOM.render(
   <React.StrictMode>
+            
       <Router>
-
-      <button onClick={inc}>Довабивть</button>
+      <Provider store={store}>
 
       <Routes>
-
+      
       <Route path="/cart/*" element={<Cart/>} />
       <Route path="/head" element={<Header/>} />
       <Route path="//*" element={<App/>} />    
@@ -34,7 +30,8 @@ ReactDOM.render(
       
       </Routes> 
 
-
+      </Provider>
+             
       </Router>
             
   </React.StrictMode>,
