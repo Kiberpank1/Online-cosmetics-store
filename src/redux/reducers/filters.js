@@ -7,6 +7,7 @@ const initialState = {
 };
 
 const filters = (state = initialState , action) => {
+    console.log(action , "Reducers filters ")
     action = {
         type:'SET_SORT_BY',
         payload: 'price'
