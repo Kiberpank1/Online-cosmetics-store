@@ -1,10 +1,15 @@
 import React from 'react'
 import {Categories, SortPopup, PizzaBlock} from '../components';
+import { useSelector } from "react-redux"
 
+function Home() {
 
-function Home({items}) {
-
-    
+  const {items} = useSelector(({pizzas}) => {  //      Используя state с помощью деструктуризации выносит нужные данные из общего хранилища 
+    return { 
+      items: pizzas.items
+      
+    }
+  });
     
     return (
         <div className="container">

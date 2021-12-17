@@ -4,21 +4,16 @@ import {Header} from './components';
 import { Route, Routes,  } from "react-router-dom";
 import axios from 'axios'
 import { setPizzas} from "./redux/actions/pizzas";
-import { useSelector, useDispatch } from "react-redux"
+import {  useDispatch } from "react-redux"
 
 
 
 
 function App () {  
   const dispacth = useDispatch();
-  const {items} = useSelector(({pizzas, filter}) => {  //      Используя state с помощью деструктуризации выносит нужные данные из общего хранилища 
-    return { 
-      items: pizzas.items,
-      sortBy: filter.sortBy
-    }
-  });
+  
 
-  console.log(items)
+  
   
 
 
@@ -37,8 +32,8 @@ function App () {
        <div className="content">   
        
       <Routes>
-      <Route path ="/" element={<Home items={items}/>}/>
-      <Route path ="/cart" element={Cart}/>
+      <Route path ="/" element={<Home/>}/>
+      <Route path ="/cart" element={<Cart/>}/>
       
       </Routes>  
   
