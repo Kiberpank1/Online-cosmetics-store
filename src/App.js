@@ -1,75 +1,84 @@
 import React from "react";
-import {Home,} from './pages'
+import {Cart, Home,} from './pages'
 import {Header} from './components';
 import { Route, Routes,  } from "react-router-dom";
 import axios from 'axios'
 import { setPizzas} from "./redux/actions/pizzas";
-import {connect} from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 
 
-// function App() {
-//   const [pizzas, setPizzas] = React.useState([])
 
-//    React.useEffect(() => {
-//      axios.get ('http://localhost:3000/db.json').then(({data}) => {
-//       setPizzas(data.pizzas);
-//      });
+function App () {  
+  const dispacth = useDispatch();
+  const {items} = useSelector(({pizzas, filter}) => {  //      Используя state с помощью деструктуризации выносит нужные данные из общего хранилища 
+    return { 
+      items: pizzas.items,
+      sortBy: filter.sortBy
+    }
+  });
 
-//   }, []);
+  console.log(items)
+  
+
+
+  React.useEffect (() => {
+    axios.get ('http://localhost:3000/db.json').then(({data}) => {
+        dispacth(setPizzas(data.pizzas));
+     });
+  }, []);
 
   
 
-//   return 
-// }
 
-class App extends React.Component {
-
-  componentDidMount() {
-    axios.get ('http://localhost:3000/db.json').then(({data}) => {
-        this.props.setPizzas(data.pizzas);
-     });
-  }
-
-
-  render() {
-    console.log(this.props)
-    return(
-    (
-   
-
-      <div className="wrapper">
+  return (
+    <div className="wrapper">
        <Header />
        <div className="content">   
        
       <Routes>
-      <Route path ="/" element={<Home items={this.props.items}/>}/>
+      <Route path ="/" element={<Home items={items}/>}/>
+      <Route path ="/cart" element={Cart}/>
       
-      </Routes>
-  
+      </Routes>  
   
        </div>
     </div>
-    )
-    );
-  }
+  )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    items: state.pizzas.items,
-    filters: state.filters,
-  }
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setPizzas: (items) => dispatch(setPizzas(items)),
-  };
-}
+export default App;
+
+
+// const mapStateToProps = (state) => {
+//   return {
+//     items: state.pizzas.items,
+//     filters: state.filters,
+//   }
+// }
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     setPizzas: (items) => dispatch(setPizzas(items)),
+//   };
+// }
   
   
 
+// export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// export default connect (
+//   (state) => {
+//     return {
+//       items: state.pizzas.items,
+//       filters: state.filters,
+//     };
+//   },
+//   (dispatch) => {
+//     return {
+//       setPizzas: (items) => dispatch(setPizzas(items)),
+//     };
+//   },
+// )(App);

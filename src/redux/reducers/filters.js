@@ -6,8 +6,7 @@ const initialState = {
     
 };
 
-const filters = (state = initialState , action) => {
-    console.log(action , "Reducers filters ")
+const filter = (state = initialState , action) => {    
     action = {
         type:'SET_SORT_BY',
         payload: 'price'
@@ -29,4 +28,4 @@ const filters = (state = initialState , action) => {
 }
 
 
-export default filters;
+export default filter;
