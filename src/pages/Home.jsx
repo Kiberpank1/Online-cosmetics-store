@@ -1,36 +1,37 @@
 import React from 'react'
 import {Categories, SortPopup, PizzaBlock} from '../components';
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { setCategory} from '../redux/actions/filters'
+
+
+const categoryNames = ['Лицо', 'Тело', 'Волосы','Наборы','Детские'];
+const sortItems = [  {name: 'популярности', type: 'popular'} ,  {name:'цене', type:'price'} ,  {name:'алфавиту', type: 'alphabet'}];
+
 
 function Home() {
 
-  const {items} = useSelector(({pizzas}) => {  //      Используя state с помощью деструктуризации выносит нужные данные из общего хранилища 
-    return { 
-      items: pizzas.items
-      
-    }
-  });
-    
+  const items = useSelector(({pizzas}) => pizzas.items);  //      Используя state с помощью деструктуризации выносит нужные данные из общего хранилища 
+  const dispatch = useDispatch();  
+
+  const onSelectCategory = React.useCallback((index) => {
+    dispatch(setCategory(index));
+  },[]);
+  
+
+
     return (
         <div className="container">
         <div className="content__top">
-        <Categories onClick={(name) => console.log(name)} 
-        items= {[
-          'Лицо',
-          'Тело',
-          'Волосы',
-          'Наборы',
-          'Детские']}            
+        <Categories 
+        onClickItem={onSelectCategory} 
+        items= {categoryNames}            
           />
 
-        <SortPopup items = {[
-          {name: 'популярности', type: 'popular'} ,
-         {name:'цене', type:'price'} ,
-          {name:'алфавиту', type: 'alphabet'}]} /> 
+        <SortPopup items = {sortItems} /> 
 
         </div>
-        <h2 className="content__title">Все наборы</h2>
-        <div className="content__items">  
+          <h2 className="content__title">Все наборы</h2>
+            <div className="content__items">  
 
           {
             items && items.map((obj) => 
