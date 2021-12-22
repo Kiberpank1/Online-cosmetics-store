@@ -28,7 +28,7 @@ function Home() {
           />
 
         <SortPopup items = {sortItems} /> 
-
+        
         </div>
           <h2 className="content__title">Все наборы</h2>
             <div className="content__items">  

@@ -13,13 +13,9 @@ function App () {
   const dispacth = useDispatch();
   
 
-  
-  
-
-
   React.useEffect (() => {
-    axios.get ('http://localhost:3000/db.json').then(({data}) => {
-        dispacth(setPizzas(data.pizzas));
+    axios.get ('http://localhost:3001/pizzas').then(({data}) => {
+        dispacth(setPizzas(data));
      });
   }, []);
 
@@ -58,11 +54,8 @@ export default App;
 //     setPizzas: (items) => dispatch(setPizzas(items)),
 //   };
 // }
-  
-  
-
+    
 // export default connect(mapStateToProps, mapDispatchToProps)(App);
-
 
 // export default connect (
 //   (state) => {
