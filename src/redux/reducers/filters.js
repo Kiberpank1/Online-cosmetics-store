@@ -1,12 +1,12 @@
 
 const initialState = {
    
-    category: 0,
+    category: null,
     sortBy: 'popular',
     
 };
 
-const filter = (state = initialState , action) => {    
+const filters = (state = initialState , action) => {    
     action = {
         type:'SET_SORT_BY',
         payload: 'price'
@@ -28,4 +28,4 @@ const filter = (state = initialState , action) => {
 }
 
 
-export default filter;
+export default filters;

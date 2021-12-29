@@ -3,7 +3,11 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 
+
+
 function PizzaBlock({name, imageUrl, price, types, sizes}) {
+
+    
 
     const availableTypes = [ 'тонкое', 'традиционное ']
     const availableSizes = [26, 30, 40];
@@ -12,14 +16,18 @@ function PizzaBlock({name, imageUrl, price, types, sizes}) {
     const [activeSize, setActiveSize] = React.useState(sizes[0]);
     
     
+    
 
     const onSelectType = (index) => {
       setActiveType(index);
+      
          };
 
     const onSelectSize = (index) => {
       setActiveSize(index);
+      
          };      
+
 
           
 
@@ -34,7 +42,7 @@ function PizzaBlock({name, imageUrl, price, types, sizes}) {
 <div className="pizza-block__selector">
   <ul>
     {availableTypes.map(( type, index) => (
-      <li 
+      <li       
       key={type}
       onClick={()=> onSelectType(index)} 
       className={classNames({
@@ -88,9 +96,18 @@ PizzaBlock.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   types: PropTypes.arrayOf(PropTypes.number).isRequired,
   sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+  
 };
 
 PizzaBlock.defaultProps = {
-  types:[]
+  types:[],
+  name: '---',
+  price: 0,
+  sizes: [],
+  
+  
+
 }
+
+
 export default PizzaBlock
