@@ -2,27 +2,14 @@ import React from "react";
 import {Cart, Home,} from './pages'
 import {Header} from './components';
 import { Route, Routes,  } from "react-router-dom";
-import axios from 'axios'
-import { fetchPizzas} from "./redux/actions/pizzas";
-import {  useDispatch } from "react-redux"
+
+
 
 
 
 
 function App () {  
-  const dispatch = useDispatch();
-  
-
-  React.useEffect (() => {
-
-    
-    console.log(dispatch(fetchPizzas()));
-    
-  }, []);
-
-  
-
-
+     
   return (
     <div className="wrapper">
        <Header />

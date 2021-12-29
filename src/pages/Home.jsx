@@ -2,6 +2,7 @@ import React from 'react'
 import {Categories, SortPopup, PizzaBlock} from '../components';
 import { useSelector, useDispatch } from "react-redux"
 import { setCategory} from '../redux/actions/filters'
+import { fetchPizzas} from "../redux/actions/pizzas";
 
 
 const categoryNames = ['Лицо', 'Тело', 'Волосы','Наборы','Детские'];
@@ -11,7 +12,16 @@ const sortItems = [  {name: 'популярности', type: 'popular'} ,  {nam
 function Home() {
 
   const items = useSelector(({pizzas}) => pizzas.items);  //      Используя state с помощью деструктуризации выносит нужные данные из общего хранилища 
-  const dispatch = useDispatch();  
+  const dispatch = useDispatch();
+  
+  React.useEffect (() => {
+    
+    
+      dispatch(fetchPizzas());
+    
+    
+    
+  }, []);
 
   const onSelectCategory = React.useCallback((index) => {
     dispatch(setCategory(index));
