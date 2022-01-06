@@ -9,8 +9,8 @@ function PizzaBlock({name, imageUrl, price, types, sizes}) {
 
     
 
-    const availableTypes = [ 'тонкое', 'традиционное ']
-    const availableSizes = [26, 30, 40];
+    const availableTypes = [ 'крем', 'мазь'];
+    const availableSizes = [50, 100, 200];
   
     const [activeType, setActiveType] = React.useState(types[0]);
     const [activeSize, setActiveSize] = React.useState(sizes[0]);
@@ -62,7 +62,7 @@ function PizzaBlock({name, imageUrl, price, types, sizes}) {
         active: activeSize === index,
         disabled: !sizes.includes(size),
       })}>
-      {size} см.
+      {size} мл.
       </li>
     ) )}
   </ul>

@@ -1,6 +1,5 @@
 
-const initialState = {
-   
+const initialState = {   
     category: null,
     sortBy: 'popular',
     
