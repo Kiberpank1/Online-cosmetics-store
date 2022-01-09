@@ -29,3 +29,5 @@ const Categories = React.memo(function Categories({items, onClickItem }) {
   )
 });
 export default Categories;
+
+// Рендер категорий выбора

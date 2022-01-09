@@ -2,6 +2,8 @@ import React from 'react'
 import ContentLoader from "react-content-loader"
 
 
+// Пререндер пустых блоков вместо данных из JSON-SERVER
+
 function PizzaLoadingBlock() {   
         return (
           <ContentLoader           

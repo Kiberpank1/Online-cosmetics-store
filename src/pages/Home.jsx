@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { setCategory} from '../redux/actions/filters'
 import { fetchPizzas} from "../redux/actions/pizzas";
 
-
+// Рендер основной страницы
 
 const categoryNames = ['Лицо', 'Тело', 'Волосы','Наборы','Детские'];
 const sortItems = [  {name: 'популярности', type: 'popular'} ,  {name:'цене', type:'price'} ,  {name:'алфавиту', type: 'alphabet'}];

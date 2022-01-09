@@ -7,13 +7,14 @@ const Button = ({onClick , className, outline, children}) => {
         onClick={onClick}
         className={classNames ('button', className, {
             'button--outline' : outline,
-                    } ) } >
+                    } ) 
+                    } >
         {children}
         
         </button>
 };
 
-
+// Рендер кнопки 
 
 Button.propTypes ={
     onClick: PropTypes.func,

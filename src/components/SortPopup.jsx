@@ -1,6 +1,6 @@
 import React from 'react'
  
-
+// Рендер Сортировки по ..
 const SortPopup = React.memo ( function SortPopup( {items}) {
     
   const [visiblePopup, setVisiblePopup] = React.useState(false) // Первый рендер ДОМ элементов !

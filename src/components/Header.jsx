@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logoSvg from "../assets/img/logo.svg";
 
 import Button from "./Button";
-
+// Рендер Шапки 
 function Header() {
     return (
     <div className="header">
