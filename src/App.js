@@ -3,7 +3,7 @@ import {Cart, Home,} from './pages'
 import {Header} from './components';
 import { Route, Routes, } from "react-router-dom";
 
-//npm run dev - старт json-server
+//npm run dev - старт json-server 
 
 
 
