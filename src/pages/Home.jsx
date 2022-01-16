@@ -1,13 +1,16 @@
 import React from 'react'
 import {Categories, SortPopup, PizzaBlock, PizzaLoadingBlock} from '../components';
 import { useSelector, useDispatch } from "react-redux"
-import { setCategory} from '../redux/actions/filters'
+import { setCategory, setSortBy} from '../redux/actions/filters'
 import { fetchPizzas} from "../redux/actions/pizzas";
 
 // Рендер основной страницы
 
 const categoryNames = ['Лицо', 'Тело', 'Волосы','Наборы','Детские'];
-const sortItems = [  {name: 'популярности', type: 'popular'} ,  {name:'цене', type:'price'} ,  {name:'алфавиту', type: 'alphabet'}];
+const sortItems = [  
+  {name: 'популярности', type: 'popular', order: 'desc'} , 
+  {name:'цене', type:'price',order: 'desc'} , 
+  {name:'алфавиту', type: 'name',order: 'asc'}];
 
 
 function Home() {
@@ -19,12 +22,16 @@ function Home() {
   console.log(category , sortBy);
   
   React.useEffect (() => {
-              dispatch(fetchPizzas());
-           
-  }, [category]);
+              
+    dispatch(fetchPizzas(sortBy, category , ));           
+  }, [category, sortBy]);
 
   const onSelectCategory = React.useCallback((index) => {
     dispatch(setCategory(index));
+  },[]);
+
+  const onSelectSortType = React.useCallback((type) => {
+    dispatch(setSortBy(type));
   },[]);
   
   
@@ -35,11 +42,11 @@ function Home() {
         <div className="content__top">
         <Categories 
         activeCategory={category}
-        onClickItem={onSelectCategory} 
+        onClickCategory={onSelectCategory} 
         items= {categoryNames}            
           />
 
-        <SortPopup items = {sortItems} /> 
+        <SortPopup activeSortType={sortBy.type}  items = {sortItems} onClickSortType={onSelectSortType}  /> 
         
         </div>
           <h2 className="content__title">Все наборы</h2>
