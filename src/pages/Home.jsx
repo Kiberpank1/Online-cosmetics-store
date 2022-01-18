@@ -19,7 +19,7 @@ function Home() {
   const isLoaded = useSelector(({pizzas}) => pizzas.isLoaded);
   const {category , sortBy} = useSelector(({filters}) => filters); //      Используя state с помощью деструктуризации выносит нужные данные из общего хранилища 
   
-  console.log(category , sortBy);
+  
   
   React.useEffect (() => {
               
