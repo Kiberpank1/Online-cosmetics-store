@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import logoSvg from "../assets/img/logo.svg";
-
 import Button from "./Button";
+
 // Рендер Шапки 
+
 function Header() {
     return (
     <div className="header">
@@ -56,11 +56,8 @@ function Header() {
           <span>3</span>
        
           </Button></Link>
-
-      
-
-          </div>
-          
+     
+          </div>          
       </div>
     </div>
     );

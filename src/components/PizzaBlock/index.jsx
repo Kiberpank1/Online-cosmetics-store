@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 
 
-
 function PizzaBlock({name, imageUrl, price, types, sizes}) {
 
     
@@ -27,7 +26,6 @@ function PizzaBlock({name, imageUrl, price, types, sizes}) {
       setActiveSize(index);
       
          };      
-
 
           
 
