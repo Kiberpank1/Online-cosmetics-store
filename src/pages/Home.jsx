@@ -3,6 +3,8 @@ import {Categories, SortPopup, PizzaBlock, PizzaLoadingBlock} from '../component
 import { useSelector, useDispatch } from "react-redux"
 import { setCategory, setSortBy} from '../redux/actions/filters'
 import { fetchPizzas} from "../redux/actions/pizzas";
+import { addPizzaToCart} from "../redux/actions/cart";
+
 
 // Рендер основной страницы
 
@@ -16,6 +18,7 @@ const sortItems = [
 function Home() {
   const dispatch = useDispatch();
   const items = useSelector(({pizzas}) => pizzas.items);
+  const cartItems = useSelector(({cart}) => cart.items);
   const isLoaded = useSelector(({pizzas}) => pizzas.isLoaded);
   const {category , sortBy} = useSelector(({filters}) => filters); //      Используя state с помощью деструктуризации выносит нужные данные из общего хранилища 
   
@@ -34,6 +37,12 @@ function Home() {
     dispatch(setSortBy(type));
   },[]);
   
+  const handleAddPizzaToCart = obj => {
+    dispatch({
+      type:'ADD_PIZZA_CART',
+      payload: obj
+    });
+  };
   
 
     return (
@@ -53,7 +62,12 @@ function Home() {
             <div className="content__items">  
 
           {isLoaded 
-          ? items.map((obj) => <PizzaBlock key={obj.id} isLoading={true} {...obj}  />  ) 
+          ? items.map((obj) => 
+            <PizzaBlock 
+          onClickAddPizza={handleAddPizzaToCart} 
+          key={obj.id}    
+          addedCount={cartItems[obj.id] && cartItems[obj.id].length}       
+          {...obj}  />  ) 
           : Array(12).fill(0).map((_, index) => <PizzaLoadingBlock key={index} />)}
                     
 
