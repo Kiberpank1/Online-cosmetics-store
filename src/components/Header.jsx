@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import logoSvg from "../assets/img/risunok1.svg";
+import logoSvg from "../assets/img/risunok4.svg";
 import Button from "./Button";
 
 // Рендер Шапки 
