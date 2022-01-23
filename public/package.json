@@ -21,7 +21,7 @@
     "redux-thunk": "^2.4.1",
     "web-vitals": "^1.1.2"
   },
-  "proxy": "http://localhost:3001",
+  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -34,7 +34,8 @@
       "react-app",
       "react-app/jest"
     ]
-  },
+    
+  },"proxy": "http://localhost:3001",
   "browserslist": {
     "production": [
       ">0.2%",

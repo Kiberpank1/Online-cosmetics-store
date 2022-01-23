@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import logoSvg from "../assets/img/logo.svg";
+import logoSvg from "../assets/img/risunok1.svg";
 import Button from "./Button";
 
 // Рендер Шапки 
@@ -14,7 +14,7 @@ function Header() {
     <div className="header">
       <div className="container">
       <Link to="/"><div className="header__logo">
-        <img width="75" src={logoSvg} alt="Pizza logo" />
+        <img width="90" src={logoSvg} alt="Pizza logo" />
         <div>
           <h1>NA||BI</h1>
           <p>С любовью к вашей коже</p>
