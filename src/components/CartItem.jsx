@@ -9,10 +9,12 @@ function CartItem({ id, name, type, size, totalPrice, totalCount, onRemove, onMi
 
   const handlePlusItem = () => {
     onPlus(id)
+    
   };
 
   const handleMinusItem = () => {
     onMinus(id)
+    
   };
 
   return <div className="cart__item">
@@ -28,9 +30,8 @@ alt="Pizza"
 <p>{type} , {size} мл.</p>
 </div>
 <div className="cart__item-count">
-<div className="button button--outline button--circle cart__item-count-minus">
-<svg
-  onClick={handleMinusItem}
+<div onClick={handleMinusItem} className="button button--outline button--circle cart__item-count-minus">
+<svg  
  width="10"
   height="10" 
   viewBox="0 0 10 10"
@@ -42,9 +43,8 @@ alt="Pizza"
 
 </div>
 <b>{totalCount}</b>
-<div className="button button--outline button--circle cart__item-count-plus">
+<div onClick={handlePlusItem} className="button button--outline button--circle cart__item-count-plus">
 <svg 
-onClick={handlePlusItem}
 width="10" 
 height="10" 
 viewBox="0 0 10 10" 
