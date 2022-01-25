@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 import { Header } from '../components'
 import CartItem from '../components/CartItem'
-import {clearCart, removeCartItem} from '../redux/actions/cart'
+import {clearCart, removeCartItem, plusCartItem, minusCartItem,} from '../redux/actions/cart'
 import cartEmptyImage from '../assets/img/empty-cart.png'
 
 
@@ -28,8 +28,17 @@ function Cart() {
 
   const onRemoveItem = (id) => {
     if (window.confirm('Вы действительно хотите удалить товар?')) {
-      removeCartItem(id)
-    }
+      dispatch(removeCartItem(id))
+    };
+
+  const onPlusItem = (id) => {
+    dispatch(plusCartItem(id))
+  }; 
+
+  const onMinusItem = (id) => {
+    dispatch(minusCartItem(id))
+  };
+
 
   }
                
@@ -67,13 +76,16 @@ function Cart() {
             </div>
             <div className="content__items">             
       { addedPizzas.map((obj) => (
-          <CartItem 
+          <CartItem       
+          id={obj.id}    
           name={obj.name} 
           type={obj.type} 
           size={obj.size} 
           totalPrice={items[obj.id].totalPrice}
           totalCount={items[obj.id].items.length}  
-          onRemove={removeCartItem}
+          onRemove={onRemoveItem}
+          onMinus={onMinusItem}
+          onPlus={onPlusItem}
           />
         ))}      
  </div>
