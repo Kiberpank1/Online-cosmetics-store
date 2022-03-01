@@ -2,8 +2,8 @@
     "pizzas": [
       {
         "id": 0,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "Крем для рук",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrLzI5Yy8yOWM5Zjk0NTM1YzBmM2MzZmRlZGU3ZmM4NDQ5MzU3Yi5wbmc.webp",
+        "name": "Ночной крем для лица",
         "types": [0, 1],
         "sizes": [50, 100, 200],
         "price": 803,
@@ -12,9 +12,9 @@
       },
       {
         "id": 1,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "Крем для рук",
-        "types": [0],
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrL2I2OS9iNjkxZTZjMjIwYzYzMjM1YTc0MzY5ZmI4OGI4YTIxNS5qcGc.webp",
+        "name": "Увлажняющая сыворотка",
+        "types": [1],
         "sizes": [50, 100, 200],
         "price": 245,
         "category": 1,
@@ -22,8 +22,8 @@
       },
       {
         "id": 2,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "Крем для рук",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrL2EwMS9hMDE3NDk4OWFmMzMyMzZiNjM5MzhiNWQ2ODI0ZWJjMy5qcGc.webp",
+        "name": "Сыворотка от пост-акне",
         "types": [0],
         "sizes": [50, 100, 200],
         "price": 295,
@@ -32,7 +32,7 @@
       },
       {
         "id": 3,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrLzNkMS8zZDFjNjJmYzM4MmI5OTVmOTQyNmIxNDY5ZjViMTZlZS5qcGc.webp",
         "name": "Крем для рук",
         "types": [1],
         "sizes": [50, 100, 200],
@@ -42,8 +42,8 @@
       },
       {
         "id": 4,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "Крем для рук",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrL2U2Ni9lNjYxZWEzNTY1YWEzMWFlYjc0MmZkMGI4MmJmMTlmOC5qcGc.webp",
+        "name": "Крем с УФ защитой",
         "types": [0, 1],
         "sizes": [50, 100, 200],
         "price": 415,
@@ -52,8 +52,8 @@
       },
       {
         "id": 5,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "Крем для рук",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrLzNkNy8zZDdkZTZhZDMzN2RhY2JmZDVmMjA4NjY0OGMwYmFmNC5qcGc.webp",
+        "name": "Лосьон для тела",
         "types": [0],
         "sizes": [50, 100, 200],
         "price": 580,
@@ -62,9 +62,9 @@
       },
       {
         "id": 6,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "Крем для рук",
-        "types": [0, 1],
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrLzhhZC84YWQzZDJjOGQ1OGZmMTlmNzBiNjMwNzRlYmI4ZTNmMy5qcGc.webp",
+        "name": "Мицеллярная вода",
+        "types": [],
         "sizes": [50, 100, 200],
         "price": 675,
         "category": 1,
@@ -72,8 +72,8 @@
       },
       {
         "id": 7,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "Крем для рук",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrLzg2Zi84NmZlOGRhOGQ1YmYwNjkyYzA3MzUxNzBkNWUxODk0YS5qcGc.webp",
+        "name": "Крем для век",
         "types": [0, 1],
         "sizes": [50, 100, 200],
         "price": 450,
@@ -82,8 +82,8 @@
       },
       {
         "id": 8,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "а",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrLzc2YS83NmE1NDJiZWY4YzQ5NzZlOWIxZThiZDk4YjY0Yzk5Yi5qcGc.webp",
+        "name": "Дневной крем для лица",
         "types": [0, 1],
         "sizes": [50, 100, 200],
         "price": 395,
@@ -92,8 +92,8 @@
       },
       {
         "id": 9,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
-        "name": "Крем для лица",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrL2JjMy9iYzMzNTBiNDJlMzhjZmRmYmZkZjFlZTQ0ZTNmMmJmMC5wbmc.webp",
+        "name": "Пенка для умывания",
         "types": [0, 1],
         "sizes": [50, 100, 200],
         "price": 285,
@@ -102,7 +102,7 @@
       },
       {
         "id": 10,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrLzYyYi82MmJiYWRhZjAzODA3ZWY0MzQ0YjJjZDQ2ZjhhNzA3MC5wbmc.webp",
         "name": "Крем для рук",
         "types": [0, 1],
         "sizes": [50, 100, 200],
@@ -112,7 +112,7 @@
       },
       {
         "id": 11,
-        "imageUrl": "https://cdn.100sp.ru/pictures/501451362",
+        "imageUrl": "https://image.mixit.ru/insecure/background:fff/resizing_type:fill/width:480/aHR0cHM6Ly9taXhpdC5ydS91cGxvYWQvaWJsb2NrL2RlZC9kZWRmN2VlMDBlNTFiYjNkNDRmYmI5M2NiNjZlODFiYy5qcGc.webp",
         "name": "Крем для рук",
         "types": [0, 1],
         "sizes": [50, 100, 200],
@@ -120,5 +120,6 @@
         "category": 5,
         "rating": 7
       }
+     
     ]
   }

@@ -9,7 +9,7 @@ function PizzaBlock({id, name, imageUrl, price, types, sizes, onClickAddPizza, a
 
     
 
-    const availableTypes = [ 'крем', 'мазь'];
+    const availableTypes = ['крем','сыворотка'];
     const availableSizes = [50, 100, 200];
   
     const [activeType, setActiveType] = React.useState(types[0]);
